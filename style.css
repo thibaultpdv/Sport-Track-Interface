@@ -1,0 +1,239 @@
+/* Style du corps de la page */
+body {
+    background-image: url('back2.jpg'); /* Définir l'image de fond */
+    background-size: cover; /* Redimensionner l'image pour couvrir toute la page */
+    background-position: center; /* Centrer l'image de fond */
+    background-attachment: fixed; /* Fixer l'image de fond pour qu'elle ne défiler pas avec la page */
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Couleur du texte */
+    position: relative; /* Ajoutez cette propriété */
+    min-height: 100vh; /* Ajustez la hauteur minimale à 100vh */
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Style du formulaire */
+form {
+    /* On centre le formulaire */
+    position: relative;
+    margin: 70px auto;
+    width: 400px;
+    /* Le contour du formulaire */
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.147); /* Couleur de fond du formulaire avec opacité */
+    border-radius: 20px; /* Ajouter un coin arrondi au formulaire */
+    margin-bottom: 150px;
+}
+
+/* Arrière-plan du formulaire */
+form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.296); /* Couleur de fond avec opacité */
+    z-index: -1; /* Envoyer l'élément en arrière-plan */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Espacement entre les éléments de la liste dans le formulaire */
+form li + li {
+    margin-top: 50px;
+}
+
+li h1 {
+    margin-top: 0;
+    padding: 0;
+}
+
+fieldset {
+    padding: 16px;
+    border: none;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: rgba(255, 255, 255, 0.637); /* Couleur de fond de l'en-tête */
+    color: #fff; /* Couleur du texte de l'en-tête */
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Éspace les éléments à gauche et à droite */
+    align-items: center; /* Centre les éléments verticalement */
+    position: relative;
+}
+
+/* Style pour le logo */
+#logo {
+    max-width: 260px; /* Largeur maximale du logo */
+    width: 100%;
+    margin-left: 10px;
+}
+
+/* Style pour le menu déroulant */
+.dropdown {
+    position: relative; /* Position relative pour positionner le contenu du menu déroulant */
+    display: inline-block; /* Affiche le menu déroulant en ligne */
+}
+
+/* Style pour le contenu du menu déroulant */
+.dropdown-content {
+    display: none; /* Masque le contenu par défaut */
+    position: absolute; /* Position absolue pour le positionner sous le bouton */
+    background-color: rgba(255, 255, 255, 0.637); /* Couleur de fond du menu déroulant */
+    min-width: 160px; /* Largeur minimale du menu déroulant */
+    z-index: 1; /* Met le menu déroulant au-dessus du reste du contenu */
+}
+
+/* Style pour les liens dans le menu déroulant */
+.dropdown-content a {
+    color: #fff; /* Couleur du texte des liens */
+    padding: 12px 16px; /* Espacement autour des liens */
+    text-decoration: none; /* Supprime la décoration des liens */
+    display: block; /* Affiche les liens en bloc */
+    transition: all 0.6s ease-out;
+}
+
+/* Style pour les liens au survol dans le menu déroulant */
+.dropdown-content a:hover {
+    background-color: rgba(255, 234, 0, 0.637); /* Couleur de fond au survol des liens */
+    color: #fff; /* Couleur du texte au survol */
+}
+
+/* Affiche le contenu du menu déroulant lorsque le bouton est survolé */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style pour aligner les boutons "Importé" et "Connecté" à droite */
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Style pour le bouton "Connecté" et le lien "Importé" */
+#connect, #button {
+    background-color: transparent; /* Fond transparent pour le bouton et le lien */
+    border: none; /* Supprime la bordure du bouton et du lien */
+    color: #1d1d1d; /* Couleur du texte du bouton et du lien */
+    cursor: pointer; /* Curseur en forme de main au survol du bouton et du lien */
+    text-decoration: none; /* Supprime la décoration du lien */
+    padding: 30px; /* Supprime le rembourrage */
+    margin-right: 70px;
+    font-size: 16px; /* Taille de police pour le bouton et le lien */
+    transition: all 0.6s ease-out;
+}
+
+/* Style pour le bouton "Connecté" et le lien "Importé" au survol */
+#connect:hover, #button:hover {
+    background-color: rgba(255, 234, 0, 0.637); /* Couleur de fond au survol du bouton et du lien */
+    color: #1d1d1d; /* Couleur du texte au survol */
+    opacity: 100%;
+}
+
+/* Style des inputs par défaut */
+input {
+    padding: 20px 40px 20px 40px;
+    border: none; /* Supprime la bordure par défaut */
+    border-bottom: 2px solid #fff; /* Ajoute une bordure sous l'input */
+    background-color: transparent; /* Fond transparent */
+    color: #fff; /* Couleur du texte */
+    transition: all 1s ease-out;
+}
+
+/* Style des inputs lorsque sélectionnés */
+input:focus {
+    border-bottom-color: #fff700; /* Couleur de la bordure en cas de sélection */
+    outline: none;
+    color: #fff; /* Couleur du texte en cas de sélection */
+}
+
+input::placeholder {
+    color: #fff;
+    opacity: 50%;
+}
+
+/* Style pour le bouton input de type file */
+input[type="file"] {
+    display: none; /* Masquer le bouton input de type file */
+}
+
+.file {
+    background-color: transparent; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 20px 40px; /* Espacement */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    text-align: center; /* Centrer le texte horizontalement */
+    transition: background-color 0.6s ease-out; /* Transition au survol */
+}
+
+.file:hover {
+    background-color: rgba(255, 234, 0, 0.637); /* Couleur de fond au survol */
+}
+
+/* Style des divs contenant les labels et les inputs */
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style des labels */
+.group label {
+    margin-bottom: 0;
+}
+
+/* Style de l'icône du champ "Date de naissance" en blanc */
+#birthdate::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Inversion des couleurs de l'icône */
+}
+
+.button {
+    text-decoration: none;
+    color: #000000;
+    padding: 20px 40px 20px 40px;
+  }
+  
+.button:hover {
+    text-decoration: none;
+    color: #1d1d1d;
+    background-color: rgba(255, 234, 0, 0.650);
+    padding: 20px 40px 20px 40px;
+    transition: 0.6s;
+  }
+
+
+footer {
+    background-color: rgba(255, 255, 255, 0.637); /* Couleur de fond de l'en-tête */
+    color: #1d1d1d; /* Couleur du texte de l'en-tête */
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-between; /* Éspace les éléments à gauche et à droite */
+    align-items: center; /* Centre les éléments verticalement */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style du conteneur du contenu */
+.contenu {
+    flex: 1; /* Faites en sorte que le contenu prenne tout l'espace vertical disponible */
+    display: flex; /* Utilisez Flexbox pour centrer le contenu */
+    flex-direction: column; /* Alignez le contenu verticalement */
+    justify-content: center; /* Centrez le contenu verticalement */
+    align-items: center; /* Centrez le contenu horizontalement */
+    padding: 70px; /* Ajoutez un peu de marge pour l'espace autour du contenu */
+    margin-bottom: 150px;
+}
+
+/* Style du texte auteur */
+.autor{
+    font-size : 50%;
+}

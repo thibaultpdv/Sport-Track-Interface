@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang ="fr">
+
+    <head>
+        <link rel="stylesheet" href="style_black.css">
+        <title>paramètresb</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-left">
+                <a href="indexconnectb.html"><img src="logo2w.png" id="logo" alt="Logo"></a>
+            </div>
+            <div class="header-right">
+                <div class="header-buttons">
+                    <a href="parametre.html" id="button">Light Theme</a>
+                    <a href="importb.html" id="button">Importer</a>
+                    <div class="dropdown">
+                        <button id="connect">Connecté</button>
+                        <div class="dropdown-content">
+                            <a href="parametreb.html">Paramètres</a>
+                            <a href="indexunconnectb.html">Se Déconnecter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <form>
+            <ul>
+              <li>
+                <h1>Paramètres</h1>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="surname">Prénom utilisateur</label>
+                  <input type="text" id="surname" name="user_surname" autofocus placeholder="Your Username" />
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="name">Nom utilisateur</label>
+                  <input type="text" id="name" name="user_name" autofocus placeholder="Your Name"/>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="birthdate">Date de naissance</label>
+                  <input type="date" id="birthdate" name="user_birthdate" autofocus placeholder=" Your Birthdate"/>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="height">Taille(cm)</label>
+                  <input type="number" id="height" name="user_height" autofocus placeholder="Your Height"/>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="weight">Poids(en kg)</label>
+                  <input type="number" id="weight" name="user_weight" autofocus placeholder="Your Weight"/>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="sexe">Sexe</label>
+                  <fieldset id="sexe">
+                      <label for="homme">Homme</label>
+                      <input type="radio" class="custom" name="user_gender" />
+                      <label for="femme">Femme</label>
+                      <input type="radio" class="custom" name="user_gender" />
+                      <label for="other">Autres</label>
+                      <input type="radio" class="custom" name="user_gender" />
+                  </fieldset>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="mail">Adresse electronique</label>
+                  <input type="email" id="mail" name="user_mail" autofocus placeholder="Your Email"/>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <label for="mdp">Mot de passe</label>
+                  <input type="password" id="mdp" name="user_password" autofocus placeholder="Entrez votre mot de passe pour enregistrer"/>
+                </div>
+              </li>
+              <li>
+                <div class="group">
+                  <a href="parametreb.html" class="button">Enregistrer les modifications</a>
+                </div>
+              </li>
+            </ul>
+          </form>
+          <footer>
+            <a href="conditionutilisationb.html" class="button">Conditions d'utilisations</a>
+            <div class="autor">
+              <p>ARANDEL Cyprien & PONDAVEN Thibault</p>
+            </div>
+          </footer>
+    </body>
+</html>
